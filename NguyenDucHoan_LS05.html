@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }</style>
+    <script>
+    window.onload = function () {
+      const width = window.innerWidth;
+
+      // Điều kiện tùy chỉnh theo bạn
+      if (width < 768) {
+        window.location.href = "mobile.html"; // Giao diện mobile
+      } else if (width >= 768 && width < 1024) {
+        window.location.href = "tablet.html"; // Giao diện tablet (nếu có)
+      } else {
+        window.location.href = "desktop.html"; // Giao diện desktop
+      }
+    };
+  </script>
+<body>
+    <p style="text-align: center; margin-top: 20%;">Đang chuyển hướng...</p>
+</body>
+</html>
