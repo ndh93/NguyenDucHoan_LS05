@@ -1,33 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travlog Responsive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          inter: ['Inter', 'sans-serif'],
+          circular: ['"Circular Std"', 'sans-serif'],
+        },
+        colors: {
+          Purple: 'rgba(93, 80, 198, 1)',
+          LightWhite: 'rgba(238, 238, 238, 1)'
+        }
+      }
+    }
+  }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+      font-family: 'Circular Std';
+      src: url('./fonts/circular-std-medium-500.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .shadow-custom-1 {
+      box-shadow: 
+      0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+      0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+      0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+      0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+      0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+      0px 856px 240px 0px rgba(0, 0, 0, 0);
+    }
+    .shadow-custom-2 {
+      box-shadow:
+      0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+      0px 5px 11px 0px rgba(0, 0, 0, 0.1),
+      0px 20px 20px 0px rgba(0, 0, 0, 0.09),
+      0px 45px 27px 0px rgba(0, 0, 0, 0.05),
+      0px 81px 32px 0px rgba(0, 0, 0, 0.01),
+      0px 126px 35px 0px rgba(0, 0, 0, 0);
+    }
+  </style>
 </head>
 <body>
-  <script src="https://cdn.tailwindcss.com"></script>
-    <style>* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }</style>
-    <script>
-    window.onload = function () {
-      const width = window.innerWidth;
-
-      // Điều kiện tùy chỉnh theo bạn
-      if (width < 768) {
-        window.location.href = "mobile.html"; // Giao diện mobile
-      } else if (width >= 768 && width < 1024) {
-        window.location.href = "tablet.html"; // Giao diện tablet (nếu có)
-      } else {
-        window.location.href = "desktop.html"; // Giao diện desktop
-      }
-    };
-  </script>
-<body>
-    <p style="text-align: center; margin-top: 20%;">Đang chuyển hướng...</p>
+  <!-- MOBILE -->
+  <div class="block md:hidden relative">
+    <div class="absolute inset-0 z-10 bg-[url('GridVisualization.png')] bg-cover bg-center"></div>
+    <div class="container mx-auto px-4 relative">
+      <!--THANH MENU-->
+      <div class="h-[112px] py-8 flex justify-between items-center" >
+          <div class=" w-[142px] h-[40px] flex justify-between items-center">
+            <img src="Vector2.svg" class="w-[40px] h-[40px]" alt="logo" />
+            <div class=" font-circular text-2xl font-black">Travlog</div>
+          </div>
+          <div class="w-12 h-12"><img src="menu.111.svg" alt="menu" /></div>
+      </div>
+      <!--SECTION 1-->
+      <div class="h-[947px] py-8 px-4 relative flex flex-col justify-center items-center gap-8">
+        <div class="w-[396.29px] h-[366px] relative">
+          <div class="w-full h-[147.52px] absolute"><img src="layer.svg" alt="layer"></div>
+          <div class="w-[295.16px] h-[324.42px] absolute top-[38.5px] left-[47.57px]">
+            <div class="w-[139.62px] h-full absolute flex flex-col justify-between items-center">
+              <div class="w-full h-[154px] rounded-[16.43px] "><img src="Rectangle1.png" alt="Rectangle1"></div>
+              <div class="w-full h-[154px] rounded-[16.43px]"><img src="Rectangle2.png" alt="Rectangle2"></div>
+            </div>
+            <div class="w-[139.62px] h-[205.33px] absolute top-[59.55px] left-[155.54px] "><img src="Rectangle3.png" alt="Rectangle2"></div>
+            <div class="w-[32.85px] h-[32.85px] rounded-[51.33px] p-[8.21px] absolute top-[136.54px] left-[-17.97px] bg-pink-500"><img src="send1.svg" alt="send"></div>
+            <div class="w-[32.85px] h-[32.85px] rounded-[51.33px] p-[8.21px] absolute top-[294.65px] left-[204.82px] bg-orange-500"><img src="add-user1.svg" alt="add-user"></div>
+            <button class="w-[85.21px] h-[28.75px] absolute top-[212px] left-[257.17px] rounded-[51.33px] flex justify-center items-center bg-white"><img src="location1.svg" alt="location">
+              <span class="font-circular text-[7.19px] font-bold">Top Places</span></button>
+          </div>
+        </div>
+        <div class="w-full h-[292px] flex flex-col justify-center items-center gap-6">
+          <button class="w-[224px] h-[56px] flex justify-between items-center rounded-[100px] px-8 py-4 gap-4">
+            <span class="font-circular text-pink-400 text-sm font-bold">Explore the world!</span><img src="work1.svg" alt="work1">
+          </button>
+          <div class="font-circular text-[40px] leading-[1.2] text-center font-bold">Travel <span class="text-pink-400">top destination</span> of the world</div>
+          <div class="font-inter text-[16px] text-gray-500 leading-[1.6] text-center ">We always make our customer happy by providing as many choices as possible </div>
+        </div>
+        <div class="w-full max-w-[398px] h-[161px] flex flex-col justify-between items-center gap-4">
+            <button class="w-full [65px] px-4 py-6 rounded-full bg-Purple font-circular text-sm text-white font-bold flex justify-center items-center shadow-custom-2">Get Started</button>
+            <button class="w-full h-[72px] px-4 py-6 rounded-full border border-LightWhite bg-white font-circular text-sm font-bold flex justify-center gap-2 items-center">
+              <img src="Vector3.svg" alt="Vector"><span>Watch Demo</span></button>
+          </div>
+      </div>
+      <!--SECTION 2-->
+      <div class="w-full h-[136px] px-4 py-8 flex flex-col justify-between items-center">
+        <div class=" h-[20px] flex justify-between items-center gap-[27px]">
+          <div class="w-[139px] h-full"><img src="tripadvisor.svg" alt="tripadvisor"></div>
+          <div class="w-[70.66px] h-full"><img src="Expedia.svg" alt="Expedia"></div>
+          <div class="w-[117.88px] h-full"><img src="booking.svg" alt="Booking"></div>
+        </div>
+        <div class=" w-[198.56px] h-[20px] flex justify-center items-center gap-[26px]">
+          <div class="w-[64.08px] h-full"><img src="airbnb.svg" alt="Airbnb"></div>
+          <div class="w-[108.488px] h-full"><img src="Rbitz.svg" alt="Rbitz"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TABLET -->
+  <div class="hidden md:block lg:hidden">
+    <div class="max-w-[1023px] h-[8965px] mx-auto px-8">
+      <!--THANH MENU-->
+      <div class="w-full h-[113px] flex justify-between items-center">
+        <div class="w-12 h-12"><img src="menu.111.svg" alt="menu" /></div>
+        <div class=" w-[142px] h-[40px] flex justify-between items-center">
+          <img src="Vector2.svg" class="w-[40px] h-[40px]" alt="logo" />
+          <div class="font-circular text-2xl font-black">Travlog</div>
+        </div>
+        <div class="w-[220px] h-[49px] flex justify-between items-center">
+          <div class="w-[105px] h-full p-4 rounded-[100px] border font-circular text-sm font-bold flex justify-center items-center">Log In</div>
+          <div class="w-[115px] h-full p-4 rounded-[100px] border font-circular text-sm font-bold bg-blue-500 flex justify-center items-center text-white">Sign up</div>
+        </div>
+      </div>
+      <!--SECTION 1-->
+      <div class="w-full h-[1338px] py-16 flex flex-col justify-between items-center">
+        <div class="w-[772px] h-[713px] relative">
+          <div class="w-full h-[287.38px] absolute"><img src="layer.svg" alt="layer"></div>
+          <div class="w-[575px] h-[632px] relative top-[75px] left-[91px]">
+            <div class="w-[272px] h-[632px] absolute flex flex-col justify-between items-center">
+              <div class="w-full h-[300px] rounded-32px "><img src="Rectangle1.png" alt="Rectangle1"></div>
+              <div class="w-full h-[300px] rounded-32px "><img src="Rectangle2.png" alt="Rectangle2"></div>
+            </div>
+            <div class="w-[272px] h-[400px] absolute top-[116px] left-[303px] "><img src="Rectangle3.png" alt="Rectangle2"></div>
+            <div class="w-16 h-16 rounded-[100px] p-4 absolute top-[266px] right-[546px] bg-pink-500"><img src="send1.svg" alt="send"></div>
+            <div class="w-16 h-16 rounded-[100px] p-4 absolute top-[574px] left-[383px] bg-orange-500"><img src="add-user1.svg" alt="add-user"></div>
+            <button class="w-[166px] h-[56px] absolute top-[413px] left-[503px] rounded-[32px] flex justify-center items-center bg-white"><img src="location1.svg" alt="location">
+                <span class="font-circular text-sm font-bold">Top Places</span></button>
+          </div>
+        </div>
+        <div class="w-full h-[433px] flex flex-col justify-center items-center gap-[43px]">
+          <button class="w-[224px] h-[56px] flex justify-between items-center rounded-[100px] px-8 py-4 gap-4">
+            <span class="font-circular text-pink-400 text-sm font-bold">Explore the world!</span><img src="work1.svg" alt="work1">
+          </button>
+          <div class="font-circular text-[56px] leading-[1.2] text-center font-bold">Travel <span class="text-pink-400">top destination</span><hr> of the world</div>
+          <div class="font-inter text-[18px] text-gray-500 leading-[1.6] text-center ">We always make our customer happy by providing <hr> as many choices as possible </div>
+          <div class="max-w-[338px] w-full h-[56px] flex justify-between items-start gap-4">
+            <button class="w-[141px] h-[49px] p-4 rounded-full shadow-custom-2 bg-blue-500 font-circular text-sm text-white font-bold flex justify-center items-center">Get Started</button>
+            <button class="w-[181px] h-[56px] p-4 rounded-full border border-gray-300 bg-white font-circular text-sm font-bold flex justify-center gap-2 items-center">
+              <img src="Vector3.svg" alt="Vector"><span>Watch Demo</span></button>
+          </div>
+        </div>
+      </div>
+      <!--SECTION 2-->
+      <div class="w-full h-[224px] p-16 flex flex-col justify-between items-center">
+        <div class="w-[567.49px] h-[32px] flex justify-between items-center">
+          <div><img src="tripadvisor.svg" alt="tripadvisor"></div>
+          <div><img src="Expedia.svg" alt="Expedia"></div>
+          <div><img src="booking.svg" alt="Booking"></div>
+        </div>
+        <div class="w-[302.1px] h-[32px] flex justify-between items-center">
+          <div><img src="airbnb.svg" alt="Airbnb"></div>
+          <div><img src="Rbitz.svg" alt="Rbitz"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- DESKTOP -->
+<div class="hidden lg:block">
+  <div class="max-w-[1440px] h-[6314px]">
+    <!--THANH MENU-->
+    <div class="w-full h-[113px] px-32 py-8 flex justify-between items-center">
+      <div class=" w-[142px] h-[40px] flex justify-between items-center">
+        <img src="Vector2.svg" class="w-[40px] h-[40px]" alt="logo" />
+        <div class="font-circular text-2xl font-bold">Travlog</div>
+      </div>
+      <nav class="w-[428px] h-[17px] gap-8"> 
+        <ul class="flex justify-between items-center">
+          <li><a href="#" class="font-circular text-sm font-bold text-gray-500 hover:text-black">Home</a></li>
+          <li><a href="#" class="font-circular text-sm font-bold text-gray-500 hover:text-black">Discover</a></li>
+          <li><a href="#" class="font-circular text-sm font-bold text-gray-500 hover:text-black">Special Deals</a></li>
+          <li><a href="#" class="font-circular text-sm font-bold text-gray-500 hover:text-black">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="w-[220px] h-[49px] flex justify-between items-center">
+        <button class="w-[105px] h-full p-4 rounded-full border font-circular text-sm font-bold flex justify-center items-center">Log In</button>
+        <button class="w-[115px] h-full p-4 rounded-full border font-circular text-sm font-bold bg-blue-500 text-white flex justify-center items-center">Sign Up</button>
+      </div>
+    </div>
+    <!--SECTION 1-->
+    <div class="w-full h-[841px] px-32 py-16 flex justify-between items-center">
+      <div class="w-[412px] h-[577px] flex flex-col justify-between items-start gap-[43px]">
+        <button class="w-[224px] h-[56px] flex justify-between items-center rounded-[100px] px-8 py-4 gap-4">
+          <span class="font-circular text-pink-400 text-sm font-bold shadow-custom-1">Explore the world!</span><img src="work1.svg" alt="work1">
+        </button>
+        <div class="font-circular text-[69px] leading-[1.2] font-bold">Travel <span class="text-pink-400">top destination</span> of the world</div>
+        <div class="font-inter text-lg text-gray-500 leading-[1.6]">We always make our customer happy by providing as many choices as possible </div>
+        <div class="max-w-[338px] w-full h-[56px] flex justify-between items-start gap-4">
+          <button class="w-[141px] h-[49px] p-4 rounded-full bg-Purple font-circular text-sm text-white font-bold flex justify-center items-center shadow-custom-2">Get Started</button>
+          <button class="w-[181px] h-[56px] p-4 rounded-full border border-LightWhite bg-white font-circular text-sm font-bold flex justify-center gap-2 items-center">
+            <img src="Vector3.svg" alt="Vector"><span>Watch Demo</span></button>
+        </div>
+      </div>
+      <div class="w-[772px] h-[713px] relative">
+        <div class="w-full h-[287.38px] absolute"><img src="layer.svg" alt="layer"></div>
+        <div class="w-[575px] h-[632px] relative top-[75px] left-[91px]">
+          <div class="w-[272px] h-[632px] absolute flex flex-col justify-between items-center">
+            <div class="w-full h-[300px] rounded-32px "><img src="Rectangle1.png" alt="Rectangle1"></div>
+            <div class="w-full h-[300px] rounded-32px "><img src="Rectangle2.png" alt="Rectangle2"></div>
+          </div>
+          <div class="w-[272px] h-[400px] absolute top-[116px] left-[303px] "><img src="Rectangle3.png" alt="Rectangle2"></div>
+          <div class="w-16 h-16 rounded-[100px] p-4 absolute top-[266px] right-[546px] bg-pink-500"><img src="send1.svg" alt="send"></div>
+          <div class="w-16 h-16 rounded-[100px] p-4 absolute top-[574px] left-[383px] bg-orange-500"><img src="add-user1.svg" alt="add-user"></div>
+          <button class="w-[166px] h-[56px] absolute top-[413px] left-[503px] rounded-[32px] flex justify-center items-center bg-white"><img src="location1.svg" alt="location">
+              <span class="font-circular text-sm font-bold">Top Places</span></button>
+        </div>
+      </div>
+    </div>
+    <!--SECTION 2-->
+    <div class="w-full h-[160px] px-32 py-16 relative flex justify-between items-center">
+      <div><img src="tripadvisor.svg" alt="tripadvisor"></div>
+      <div><img src="Expedia.svg" alt="Expedia"></div>
+      <div><img src="booking.svg" alt="Booking"></div>
+      <div><img src="airbnb.svg" alt="Airbnb"></div>
+      <div><img src="Rbitz.svg" alt="Rbitz"></div>
+    </div>
+  </div>
 </body>
 </html>
